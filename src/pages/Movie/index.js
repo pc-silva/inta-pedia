@@ -28,6 +28,22 @@ function Movie() {
     loadMovie();
   }, [navigation, id]);
 
+  function saveMovie() {
+    const listMovies = localStorage.getItem("@cineMedia");
+    let savedMovies = JSON.parse(listMovies) || [];
+    const hasMovies = savedMovies.some(
+      (haveSaved) => haveSaved.id === movie.id,
+    );
+    if (hasMovies) {
+      alert("Este filme já contém na sua lista!");
+      return;
+    }
+
+    savedMovies.push(movie);
+    localStorage.setItem("@cineMedia", JSON.stringify(savedMovies));
+    alert("Filme adicionado com sucesso!");
+  }
+
   return (
     <div className="list-info">
       {loading ? (
@@ -36,7 +52,7 @@ function Movie() {
         <>
           <div className="left">
             <img
-              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
             />
           </div>
           <div className="right">
@@ -47,7 +63,7 @@ function Movie() {
               <span className="rated">{movie.vote_average}</span> / 10
             </strong>
             <div className="area-buttons">
-              <button>Salvar</button>
+              <button onClick={saveMovie}>Salvar</button>
               <button>
                 <a
                   target="_blank"
