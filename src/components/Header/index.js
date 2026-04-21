@@ -7,7 +7,7 @@ function Header() {
       <Link className="logo" to="/">
         CineMedia
       </Link>
-      <Link className="favorites" to="/favorites">
+      <Link className="favorites-button" to="/favorites">
         Meus filmes
       </Link>
     </header>

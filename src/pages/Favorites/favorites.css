@@ -1,0 +1,21 @@
+.favorites {
+  width: 100%;
+  max-width: 850px;
+  text-align: center;
+}
+
+.favorites ul {
+  margin-inline: 80px;
+  list-style: none;
+}
+
+.favorites ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.favorites ul li a {
+  margin-right: 20px;
+}
