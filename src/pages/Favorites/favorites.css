@@ -17,5 +17,51 @@
 }
 
 .favorites ul li a {
-  margin-right: 20px;
+  background-color: var(--btn-secondary);
+  color: var(--text-primary);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  flex: 1;
+  margin-right: var(--spacing-sm);
+  font-size: 14px;
+  transition: background-color var(--transition-fast);
+}
+
+.favorites ul li a:hover {
+  background-color: var(--btn-secondary-hover);
+}
+
+.favorites ul li button {
+  background-color: var(--btn-danger);
+  color: var(--text-primary);
+  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  flex: 1;
+  transition: background-color var(--transition-fast);
+}
+
+.favorites ul li button:hover {
+  background-color: var(--btn-danger-hover);
+}
+
+@media (max-width: 605px) {
+  .favorites ul li {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .favorites ul li div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .favorites ul li div a,
+  .favorites ul li div button {
+    width: 100%;
+    margin-bottom: var(--spacing-sm);
+  }
 }

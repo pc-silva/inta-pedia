@@ -1,11 +1,48 @@
+:root {
+  /* Cores principais - Fundo */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #141414;
+
+  /* Cores de texto */
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+
+  /* Botões */
+  --btn-primary: #e50914;
+  --btn-primary-hover: #b20710;
+  --btn-secondary: #1f4a7a;
+  --btn-secondary-hover: #0f2f4f;
+  --btn-danger: #6b1d1d;
+  --btn-danger-hover: #8b2a2a;
+
+  /* Bordas e separadores */
+  --border-color: #2c2c2c;
+
+  /* Espaçamentos (opcional) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* Bordas arredondadas */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Transições */
+  --transition-fast: 0.4s ease;
+  --transition-normal: 0.6s ease;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
-  background-color: #c9d1ff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .app {
   width: 100%;

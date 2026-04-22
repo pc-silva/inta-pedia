@@ -5,7 +5,7 @@ function Header() {
   return (
     <header>
       <Link className="logo" to="/">
-        CineMedia
+        Cine<span className="logo-highlight">Media</span>
       </Link>
       <Link className="favorites-button" to="/favorites">
         Meus filmes

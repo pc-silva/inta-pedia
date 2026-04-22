@@ -1,62 +1,58 @@
 .list-info {
   display: flex;
-  justify-content: space-between;
-  max-width: 850px;
+  flex-direction: column;
+  max-width: 650px;
   margin: 12px;
   gap: 12px;
+}
 
-  .left {
-    flex: 1;
-    width: 600px;
-  }
+img {
+  width: 100%;
+  max-width: 650px;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+}
 
-  .right {
-    flex: 2;
+.right h1 {
+  margin: 0;
+  text-align: left;
+}
 
-    h3 {
-      margin-block: 12px;
-    }
+.right h3 {
+  margin-block: var(--spacing-xs);
+}
 
-    strong {
-      display: block;
-      margin-top: 6px;
+.right strong {
+  display: block;
+  margin-top: 6px;
+}
 
-      .rated {
-        color: #3a55f1;
-      }
-    }
+.right strong .rated {
+  color: #eaff04;
+}
 
-    .area-buttons {
-      margin-top: 12px;
+.area-buttons {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
 
-      button {
-        font-size: 16px;
-        font-weight: bold;
-        padding: 6px 18px;
-        background-color: #3a55f1;
-        border: none;
-        border-radius: 4px;
-        color: #fff;
-        transition: all 0.5s;
-        cursor: pointer;
+.area-buttons button {
+  background-color: var(--btn-secondary);
+  color: var(--text-primary);
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  flex: 1;
+  margin-right: var(--spacing-sm);
+}
 
-        & + button {
-          margin-left: 8px;
-        }
+.area-buttons button:hover {
+  background-color: var(--btn-secondary-hover);
+}
 
-        &:hover {
-          background-color: black;
-        }
-      }
-
-      a {
-        color: #fff;
-      }
-    }
-  }
-
-  img {
-    width: 100%;
-    border-radius: 6px;
-  }
+.area-buttons a {
+  color: #fff;
 }

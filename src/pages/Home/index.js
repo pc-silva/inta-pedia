@@ -26,6 +26,7 @@ function Home() {
 
   return (
     <div className="container">
+      <h1>Top 10 filmes no cinema</h1>
       <div className="list-movies">
         {loading ? (
           <h2>Carregando lista de filmes...</h2>
